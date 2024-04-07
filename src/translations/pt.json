@@ -1,0 +1,18 @@
+{
+  "login": "Entrar",
+  "email": "E-mail",
+  "password": "Senha",
+  "noAccount": "Não tem uma conta?",
+  "cadastre": "Cadastre-se",
+  "enterEmail": "Preencha o e-mail",
+  "enterPassword": "Preencha a senha",
+  "enterName": "Preencha o nome",
+  "name": "Nome",
+  "signUp": "Cadastrar",
+  "slogan": "Organize-se de maneira inteligente - todas as suas necessidades, um só lugar.",
+  "allRoutine": "Toda a sua rotina em um só lugar, ajudamos você a se organizar nas seguintes áreas:",
+  "tasks": "Tarefas diárias",
+  "finances": "Finanças",
+  "health": "Saúde",
+  "moreInfo": "Quero saber mais"
+}

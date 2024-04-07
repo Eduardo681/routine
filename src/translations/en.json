@@ -1,0 +1,19 @@
+{
+    "login": "Login",
+    "email": "Email",
+    "password": "Password",
+    "noAccount": "Don't have an account?",
+    "cadastre": "Sign Up",
+    "enterEmail": "Enter your email",
+    "enterPassword": "Enter your password",
+    "enterName": "Enter your name",
+    "name": "Name",
+    "signUp": "Sign Up",
+    "slogan": "Organize yourself intelligently - all your needs, one place.",
+    "allRoutine": "All your routine in one place, we help you organize yourself in the following areas:",
+    "tasks": "Daily Tasks",
+    "finances": "Finances",
+    "health": "Health",
+    "moreInfo": "Learn more"
+  }
+  
