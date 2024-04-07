@@ -22,7 +22,7 @@ export default {
           <li class="service">{{ $t("finances") }}</li>
           <li class="service">{{ $t("health") }}</li>
         </ul>
-        <button>{{ $t("moreInfo") }} </button>
+        <nuxt-link to="/about" class="btn-primary">{{ $t("moreInfo") }} </nuxt-link>
       </div>
       <div class="contact">
         <form class="login-form">
@@ -36,10 +36,10 @@ export default {
             <input type="password" id="password" v-model="password" :placeholder="$t('enterPassword')">
           </div>
           <button type="submit">{{ $t("login") }}</button>
-          <p>{{ $t("noAccount") }} <nuxt-link to="/createAccount">{{ $t("cadastre") }}</nuxt-link></p>
+          <p>{{ $t("noAccount") }} <nuxt-link to="/signup" class="link">{{ $t("signUp") }}</nuxt-link></p>
         </form>
       </div>
     </div>
-
+    <Footer />
   </div>
 </template>

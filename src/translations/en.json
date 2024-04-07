@@ -3,7 +3,6 @@
     "email": "Email",
     "password": "Password",
     "noAccount": "Don't have an account?",
-    "cadastre": "Sign Up",
     "enterEmail": "Enter your email",
     "enterPassword": "Enter your password",
     "enterName": "Enter your name",
@@ -14,6 +13,17 @@
     "tasks": "Daily Tasks",
     "finances": "Finances",
     "health": "Health",
-    "moreInfo": "Learn more"
-  }
+    "moreInfo": "Learn more",
+    "welcome": "Welcome to our service!",
+    "about": "About",
+    "aboutUs": "Welcome to our personal organization service, where our mission is to simplify and enhance your daily life. We offer a comprehensive platform designed to make managing various aspects of your life more efficient and rewarding.",
+    "tasksManagement": "Daily Task Management",
+    "tasksManagementText": "With our daily task management tool, you can organize your daily activities clearly and efficiently. Never forget important appointments or urgent tasks again. Stay productive and focused on your priorities, whether at work, at home, or anywhere else.",
+    "goals": "Long-Term Goal Management",
+    "goalsText": "We're here to help you achieve your long-term goals, whether it's reading a specific number of books per year, saving money for a major purchase, or following a balanced diet to improve your health. Our platform provides planning and tracking tools to make your goals achievable and keep you motivated along the way.",
+    "dietPlanning": "Diet Planning with Macros and Workout Log",
+    "dietPlanningText":"We believe that healthy eating and regular exercise are essential for a balanced and happy life. With our diet planning and workout log tools, you can track your macronutrient intake, set fitness goals, and record your progress easily and conveniently.",
+    "financesPlanning": "Financial Inflows/Outflows Control",
+    "financesPlanningText": "We understand the importance of keeping your finances in order. Our platform offers robust features to track your financial inflows and outflows, budgeting, categorizing expenses, and staying informed about your current financial situation. Take control of your finances and work towards lasting financial stability.",
+    "conclusionAbout": "With a variety of features and functionalities, our platform is designed to simplify your life and help you achieve your goals effectively and gratifyingly. Join us today and start your journey towards a more organized, balanced, and fulfilled life!"  }
   

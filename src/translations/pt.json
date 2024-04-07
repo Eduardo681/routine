@@ -3,7 +3,6 @@
   "email": "E-mail",
   "password": "Senha",
   "noAccount": "Não tem uma conta?",
-  "cadastre": "Cadastre-se",
   "enterEmail": "Preencha o e-mail",
   "enterPassword": "Preencha a senha",
   "enterName": "Preencha o nome",
@@ -14,5 +13,17 @@
   "tasks": "Tarefas diárias",
   "finances": "Finanças",
   "health": "Saúde",
-  "moreInfo": "Quero saber mais"
+  "moreInfo": "Quero saber mais",
+  "welcome": "Bem-vindo ao nosso serviço!",
+  "about": "Sobre",
+  "aboutUs": "Bem-vindo ao nosso serviço de organização pessoal, onde nossa missão é simplificar e aprimorar sua vida diária. Oferecemos uma plataforma abrangente que visa tornar o gerenciamento de várias áreas da sua vida mais eficiente e gratificante.",
+  "tasksManagement": "Gerenciamento de Tarefas Diárias",
+  "tasksManagementText": "Com nossa ferramenta de gerenciamento de tarefas diárias, você pode organizar suas atividades diárias de forma clara e eficiente. Nunca mais se esqueça de compromissos importantes ou tarefas urgentes. Mantenha-se produtivo e focado em suas prioridades, seja no trabalho, em casa ou em qualquer lugar.",
+  "goals": "Gerenciamento de Metas a Longo Prazo",
+  "goalsText": "Estamos aqui para ajudá-lo a alcançar seus objetivos a longo prazo, sejam eles ler um número específico de livros por ano, economizar dinheiro para uma grande compra ou realizar uma dieta equilibrada para melhorar sua saúde. Nossa plataforma oferece ferramentas de planejamento e acompanhamento para tornar suas metas alcançáveis e manter você motivado ao longo do caminho.",
+  "dietPlanning": "Planejamento de Dieta com Macros e Registro de Ficha de Treino",
+  "dietPlanningText":"Acreditamos que uma alimentação saudável e a prática regular de exercícios são fundamentais para uma vida equilibrada e feliz. Com nossas ferramentas de planejamento de dieta e registro de ficha de treino, você pode acompanhar sua ingestão de macronutrientes, definir metas de condicionamento físico e registrar seu progresso de forma fácil e conveniente.",
+  "financesPlanning": "Controle de Entradas/Saídas Financeiras",
+  "financesPlanningText": "Entendemos a importância de manter suas finanças em ordem. Nossa plataforma oferece recursos robustos para acompanhar suas entradas e saídas financeiras, fazer orçamentos, categorizar despesas e manter-se informado sobre sua situação financeira atual. Tome o controle de suas finanças e trabalhe em direção a uma estabilidade financeira duradoura.",
+  "conclusionAbout": "Com uma variedade de recursos e funcionalidades, nossa plataforma é projetada para simplificar sua vida e ajudá-lo a alcançar seus objetivos de maneira eficaz e gratificante. Junte-se a nós hoje e comece sua jornada em direção a uma vida mais organizada, equilibrada e realizada!"
 }

@@ -1,5 +1,6 @@
 @import "_variables.scss";
 @import "pages/home";
+@import "components/footer";
 
 * {
   margin: 0;
@@ -8,8 +9,10 @@
   font-family: "Mitr", sans-serif;
 }
 
-button {
-  min-width: 160px;
+button,
+.btn-primary {
+  display: block;
+  text-align: center;
   min-height: 45px;
   padding: 10px 20px;
   background: $primary-color;
@@ -20,6 +23,7 @@ button {
   width: 100%;
   margin: 15px 0;
   cursor: pointer;
+  text-decoration: none;
 
   &:hover {
     background-color: darken($primary-color, 10%);
@@ -34,7 +38,7 @@ input {
   margin: 10px 0;
 }
 
-a {
+.link {
   color: $primary-color;
   text-decoration: none;
   transition: color 0.3s ease;

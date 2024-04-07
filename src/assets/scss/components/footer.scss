@@ -1,0 +1,22 @@
+.footer {
+  text-align: center;
+  height: 10vh;
+  position: fixed;
+  width: 100%;
+  border-top: 1px solid $secondary-color;
+  bottom: 0px;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .copy,
+  .credit {
+    margin-bottom: 10px;
+  }
+
+  .developer {
+    color: $primary-color;
+  }
+}

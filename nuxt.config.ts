@@ -13,4 +13,12 @@ export default defineNuxtConfig({
     },
   },
   css: ["assets/scss/styles.scss"],
+  app: {
+    head: {
+      charset: "utf-8",
+      viewport: "width=device-width, initial-scale=1",
+      title: "Util routine",
+      meta: [{ name: "description", content: "App for routine management." }],
+    },
+  },
 });
