@@ -1,0 +1,52 @@
+$grid-columns: 12;
+$grid-gutter-width: 20px;
+
+@mixin grid-span($columns) {
+  width: calc($columns / $grid-columns);
+  float: left;
+  margin-right: $grid-gutter-width;
+}
+
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.column {
+  @include clearfix();
+  box-sizing: border-box;
+}
+
+.col {
+  @include grid-span(1);
+}
+
+.col-2 {
+  @include grid-span(2);
+}
+
+.col-4 {
+  @include grid-span(4);
+}
+
+.col-6 {
+  @include grid-span(6);
+}
+
+.col-8 {
+  @include grid-span(8);
+}
+
+.col-8 {
+  @include grid-span(10);
+}
+
+@media screen and (max-width: 768px) {
+  .col {
+    width: 100%;
+    margin-right: 0;
+  }
+}

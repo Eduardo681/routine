@@ -1,5 +1,11 @@
 <script lang="ts">
+import { ErrorMessage, Field, Form } from 'vee-validate';
 export default {
+    components: {
+        ErrorMessage,
+        Field,
+        Form
+    },
     data() {
         return {
             email: '',
@@ -7,42 +13,49 @@ export default {
             name: ''
         };
     },
+
     methods: {
         signUp() {
-            // TODO
-            console.log("ok")
+            this.$userStore.createUser(this.$api, this.email, this.password, this.name)
         }
     }
 }
 </script>
+
 <template>
     <div class="landing-page">
         <div class="background">
-            <div class="content">
+            <div class="col col-8 content">
                 <h1 class="title">Util Routine</h1>
                 <p class="description">{{ $t("slogan") }}</p>
                 <p class="text">
                     {{ $t("welcome") }}
                 </p>
             </div>
-            <div class="contact">
-                <form class="login-form">
+            <div class="col col-4 contact">
+                <Form class="login-form" @submit="signUp">
                     <h2 class="title">{{ $t("signUp") }}</h2>
                     <div class="form-group">
                         <label for="email">{{ $t("email") }}</label>
-                        <input type="text" id="email" required v-model="email" :placeholder="$t('enterEmail')">
+                        <Field type="email" id="email" :name="$t('email')" v-model="email"
+                            :placeholder="$t('enterEmail')" rules="required|email" />
+                        <ErrorMessage :name="$t('email')" />
                     </div>
                     <div class="form-group">
                         <label for="password">{{ $t("password") }}</label>
-                        <input type="password" id="password" v-model="password" :placeholder="$t('enterPassword')">
+                        <Field type="password" id="password" :name="$t('password')" v-model="password"
+                            :placeholder="$t('enterPassword')" rules="required|min:6" />
+                        <ErrorMessage :name="$t('password')" />
                     </div>
                     <div class="form-group">
                         <label for="name">{{ $t("name") }}</label>
-                        <input id="password" v-model="name" :placeholder="$t('enterName')">
+                        <Field type="text" id="name" :name="$t('name')" v-model="name" :placeholder="$t('enterName')"
+                            rules="required" />
+                        <ErrorMessage :name="$t('name')" />
                     </div>
-                    <button type="submit" @click.prevent="signUp">{{ $t("signUp") }}</button>
+                    <button type="submit">{{ $t("signUp") }}</button>
                     <nuxt-link class="link" to="/">{{ $t("login") }}</nuxt-link>
-                </form>
+                </Form>
             </div>
         </div>
         <Footer />

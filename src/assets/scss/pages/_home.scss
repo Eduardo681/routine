@@ -12,10 +12,24 @@
 
     padding-top: 10%;
 
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
     .content {
       padding-left: 150px;
       max-width: 800px;
       margin-right: 20%;
+
+      @media screen and (max-width: 768px) {
+        padding-left: unset;
+        margin-right: unset;
+      }
 
       &.about {
         max-width: 1000px;
@@ -63,6 +77,10 @@
     height: max-content;
     width: 500px;
     border: 1px dotted $primary-color;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   .login-form {

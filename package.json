@@ -12,13 +12,19 @@
   "dependencies": {
     "@nuxt/types": "^2.17.3",
     "@pinia/nuxt": "^0.5.1",
+    "@vee-validate/i18n": "^4.12.6",
+    "@vee-validate/nuxt": "^4.12.6",
+    "@vee-validate/rules": "^4.12.6",
+    "axios": "^1.6.8",
     "nuxt": "^3.11.2",
     "pinia": "^2.1.7",
     "sass": "^1.74.1",
+    "vee-validate": "^4.12.6",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
-    "@nuxtjs/i18n": "^8.3.0"
+    "@nuxtjs/i18n": "^8.3.0",
+    "@types/dotenv-safe": "^8.1.6"
   }
 }
