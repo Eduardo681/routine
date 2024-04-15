@@ -1,16 +1,19 @@
 <script lang="ts">
 import { ErrorMessage, Field, Form } from 'vee-validate';
+import ErrorModal from '../components/modals/ErrorModal.vue';
+
 export default {
     components: {
         ErrorMessage,
         Field,
-        Form
+        Form,
+        ErrorModal,
     },
     data() {
         return {
             email: '',
             password: '',
-            name: ''
+            name: '',
         };
     },
 
@@ -56,6 +59,11 @@ export default {
                     <button type="submit">{{ $t("signUp") }}</button>
                     <nuxt-link class="link" to="/">{{ $t("login") }}</nuxt-link>
                 </Form>
+                <div v-if="this.$userStore.loading" class="loading-overlay">
+                    <div class="spinner"></div>
+                </div>
+                <ErrorModal :errorMessage="this.$userStore.error" v-if="this.$userStore.error"
+                    @close="this.$userStore.clearError" />
             </div>
         </div>
         <Footer />
