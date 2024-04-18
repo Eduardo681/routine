@@ -16,10 +16,7 @@ export default defineNuxtConfig({
       API_ENDPOINT: process.env.API_ENDPOINT,
     },
   },
-  css: [
-    "assets/scss/styles.scss",
-    "@fortawesome/fontawesome-svg-core/styles.css",
-  ],
+  css: ["assets/scss/styles.scss"],
   app: {
     head: {
       charset: "utf-8",
