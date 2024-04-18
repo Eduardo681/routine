@@ -23,8 +23,7 @@ export default {
         <div class="modal-content">
             <span class="close" @click="closeModal">&times;</span>
             <div :class="{ 'modal-header': true, error: error, success: !error }">
-                <font-awesome-icon icon="bug" v-if="error" />
-                <font-awesome-icon icon="check" v-else />
+                <!-- TODO - ADD ICONS -->
                 <h2>{{ error ? $t("error") : $t("success") }}</h2>
             </div>
             <div class="modal-body">

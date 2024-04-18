@@ -10,8 +10,6 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@fortawesome/free-solid-svg-icons": "^6.5.2",
-    "@fortawesome/vue-fontawesome": "^3.0.6",
     "@nuxt/types": "^2.17.3",
     "@pinia/nuxt": "^0.5.1",
     "@vee-validate/i18n": "^4.12.6",
