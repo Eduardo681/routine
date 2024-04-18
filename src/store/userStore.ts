@@ -33,7 +33,7 @@ export const useUserStore = defineStore("user", {
           const token = useCookie("token");
           token.value = loginResponse?.data?.token;
           this.logged = true;
-          window.location.href = "/home";
+          window.location.href = "/dashboard";
         }
       } catch (error: any) {
         this.error = true;

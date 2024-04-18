@@ -1,8 +1,8 @@
 import { useUserStore } from "~/store/userStore";
 
 export default defineNuxtRouteMiddleware((to) => {
-  const { logged } = storeToRefs(useUserStore()); // make authenticated state reactive
-  const token = useCookie("token"); // get token from cookies
+  const { logged } = storeToRefs(useUserStore());
+  const token = useCookie("token");
 
   if (token.value) {
     logged.value = true;

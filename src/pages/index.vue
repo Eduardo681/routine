@@ -31,7 +31,7 @@ export default {
 }
 </script>
 <template>
-  <div class="landing-page">
+  <div class="container">
     <Loading :loading="getUserStore.loading" />
     <Modal :message="$t('invalidCredentials')" v-if="getUserStore.error" @close="getUserStore.clearError" error />
     <div class="background">
@@ -42,7 +42,7 @@ export default {
           {{ $t("allRoutine") }}
         </p>
         <ul class="services">
-          <li class="service">{{ $t("tasks") }}</li>
+          <li class="service">{{ $t("tasksHome") }}</li>
           <li class="service">{{ $t("finances") }}</li>
           <li class="service">{{ $t("health") }}</li>
         </ul>

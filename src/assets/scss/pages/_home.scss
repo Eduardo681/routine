@@ -1,4 +1,4 @@
-.landing-page {
+.container {
   margin-bottom: 20px;
 
   .background {
@@ -32,7 +32,8 @@
       }
 
       &.about {
-        max-width: 1000px;
+        max-width: unset !important;
+        text-align: justify;
       }
     }
   }

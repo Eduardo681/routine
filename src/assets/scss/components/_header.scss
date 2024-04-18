@@ -1,0 +1,42 @@
+.header {
+  background-color: #fff;
+  color: $primary-color;
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+}
+
+.logo img {
+  width: 200px;
+  height: auto;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav li {
+  margin-right: 50px;
+}
+
+.nav li:last-child {
+  margin-right: 0;
+}
+
+.nav a {
+  color: $primary-color;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}

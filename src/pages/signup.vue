@@ -35,7 +35,7 @@ export default {
 </script>
 
 <template>
-    <div class="landing-page">
+    <div class="container">
         <Loading :loading="getUserStore.loading" />
         <Modal :message="$t('errorSignUp')" v-if="getUserStore.error" @close="getUserStore.clearError" error />
         <Modal :message="$t('userSignUpSuccessful')" v-if="getUserStore.showSuccess"
