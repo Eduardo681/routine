@@ -10,14 +10,16 @@ export default defineNuxtConfig({
       ErrorMessage: "VeeErrorMessage",
     },
   },
-
   srcDir: "src",
   runtimeConfig: {
     public: {
       API_ENDPOINT: process.env.API_ENDPOINT,
     },
   },
-  css: ["assets/scss/styles.scss"],
+  css: [
+    "assets/scss/styles.scss",
+    "@fortawesome/fontawesome-svg-core/styles.css",
+  ],
   app: {
     head: {
       charset: "utf-8",
@@ -25,6 +27,8 @@ export default defineNuxtConfig({
       title: "Util routine",
       meta: [{ name: "description", content: "App for routine management." }],
     },
+
+    pageTransition: { name: "page", mode: "out-in" },
   },
   plugins: ["~/plugins/validator.ts"],
 });

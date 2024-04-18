@@ -1,13 +1,3 @@
-<script lang="ts">
-export default {
-    data() {
-        return {
-            username: '',
-            password: ''
-        };
-    }
-}
-</script>
 <template>
     <div class="landing-page">
         <div class="background">

@@ -1,35 +1,80 @@
+import type { AxiosInstance, AxiosResponse } from "axios";
 import { defineStore } from "pinia";
 
 export const useUserStore = defineStore("user", {
-  state: () => ({
+  state: (): UserState => ({
     logged: false,
-    token: undefined,
-    error: null,
+    token: null,
+    error: false,
     loading: false,
+    name: null,
+    showSuccess: false,
   }),
   actions: {
-    async createUser(api, email, password, name) {
+    async login(
+      api: AxiosInstance,
+      email: string,
+      password: string
+    ): Promise<any> {
+      this.error = false;
+      this.loading = true;
+
+      try {
+        const response: AxiosResponse = await api.post("/login", {
+          email,
+          password,
+        });
+
+        const loginResponse: LoginResponse = response.data;
+
+        this.logged = true;
+
+        if (loginResponse.data) {
+          const token = useCookie("token");
+          token.value = loginResponse?.data?.token;
+          this.logged = true;
+          window.location.href = "/home";
+        }
+      } catch (error: any) {
+        this.error = true;
+      } finally {
+        this.loading = false;
+      }
+    },
+    async createUser(
+      api: AxiosInstance,
+      email: string,
+      password: string,
+      name: string
+    ) {
       try {
         this.loading = true;
 
-        let response = await api.post("/user", {
+        await api.post("/user", {
           email: email,
           password: password,
           name: name,
         });
 
-        this.logged = true;
-        this.token = response.data.token;
-        localStorage.setItem("token", response.data.token);
-        localStorage.setItem("name", response.data.name);
-      } catch (error) {
-        this.error = "Error creating user: " + error.message;
+        this.showSuccess = true;
+      } catch (error: any) {
+        this.error = true;
       } finally {
         this.loading = false;
       }
     },
+    logUserOut() {
+      const token = useCookie("token");
+      this.logged = false;
+      token.value = null;
+      window.location.href = "/";
+    },
     clearError() {
-      this.error = null;
+      this.error = false;
+    },
+    clearSuccess() {
+      this.showSuccess = false;
+      window.location.href = "/";
     },
   },
 });

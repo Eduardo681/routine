@@ -25,5 +25,13 @@
     "dietPlanningText":"We believe that healthy eating and regular exercise are essential for a balanced and happy life. With our diet planning and workout log tools, you can track your macronutrient intake, set fitness goals, and record your progress easily and conveniently.",
     "financesPlanning": "Financial Inflows/Outflows Control",
     "financesPlanningText": "We understand the importance of keeping your finances in order. Our platform offers robust features to track your financial inflows and outflows, budgeting, categorizing expenses, and staying informed about your current financial situation. Take control of your finances and work towards lasting financial stability.",
-    "conclusionAbout": "With a variety of features and functionalities, our platform is designed to simplify your life and help you achieve your goals effectively and gratifyingly. Join us today and start your journey towards a more organized, balanced, and fulfilled life!"  }
+    "conclusionAbout": "With a variety of features and functionalities, our platform is designed to simplify your life and help you achieve your goals effectively and gratifyingly. Join us today and start your journey towards a more organized, balanced, and fulfilled life!" ,
+    "invalidCredentials": "Invalid credentials",
+    "error": "Error",
+    "footerCopy": "2024. All rights reserved.",
+    "developed": "Developed by ",
+    "userSignUpSuccessful": "User signUp successful!",
+    "errorSignUp": "Error on user signUp",
+    "success": "Success!"
+}
   

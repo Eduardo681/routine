@@ -1,15 +1,39 @@
 <script lang="ts">
+import { ErrorMessage, Field, Form } from 'vee-validate';
+import Loading from '../components/Loading.vue';
+import Modal from '../components/modals/Modal.vue';
 export default {
-  data() {
+  setup() {
+    let email = ref()
+    let password = ref()
     return {
-      username: '',
-      password: ''
+      email,
+      password
     };
+  },
+  components: {
+    ErrorMessage,
+    Field,
+    Form,
+    Modal,
+    Loading,
+  },
+  computed: {
+    getUserStore() {
+      return this.$userStore;
+    }
+  },
+  methods: {
+    login() {
+      this.getUserStore.login(this.$api, this.email.value, this.password.value);
+    }
   }
 }
 </script>
 <template>
   <div class="landing-page">
+    <Loading :loading="getUserStore.loading" />
+    <Modal :message="$t('invalidCredentials')" v-if="getUserStore.error" @close="getUserStore.clearError" error />
     <div class="background">
       <div class="content">
         <h1 class="title">Util Routine</h1>
@@ -25,19 +49,23 @@ export default {
         <nuxt-link to="/about" class="btn-primary">{{ $t("moreInfo") }} </nuxt-link>
       </div>
       <div class="contact">
-        <form class="login-form">
+        <Form class="login-form" @submit="login">
           <h2 class="title">{{ $t("login") }}</h2>
           <div class="form-group">
             <label for="username">{{ $t("email") }}</label>
-            <input type="text" id="username" v-model="username" :placeholder="$t('enterEmail')">
+            <Field type="email" id="email" :name="$t('email')" ref="email" :placeholder="$t('enterEmail')"
+              rules="required|email" />
+            <ErrorMessage :name="$t('email')" />
           </div>
           <div class="form-group">
             <label for="password">{{ $t("password") }}</label>
-            <input type="password" id="password" v-model="password" :placeholder="$t('enterPassword')">
+            <Field type="password" id="password" :name="$t('password')" ref="password"
+              :placeholder="$t('enterPassword')" rules="required|min:6" />
+            <ErrorMessage :name="$t('password')" />
           </div>
           <button type="submit">{{ $t("login") }}</button>
           <p>{{ $t("noAccount") }} <nuxt-link to="/signup" class="link">{{ $t("signUp") }}</nuxt-link></p>
-        </form>
+        </Form>
       </div>
     </div>
     <Footer />

@@ -1,25 +1,34 @@
 <script lang="ts">
 import { ErrorMessage, Field, Form } from 'vee-validate';
-import ErrorModal from '../components/modals/ErrorModal.vue';
+import Loading from '../components/Loading.vue';
+import Modal from '../components/modals/Modal.vue';
 
 export default {
+    setup() {
+        let email = ref()
+        let password = ref()
+        let name = ref()
+        return {
+            email,
+            password,
+            name
+        };
+    },
     components: {
         ErrorMessage,
         Field,
         Form,
-        ErrorModal,
+        Modal,
+        Loading,
     },
-    data() {
-        return {
-            email: '',
-            password: '',
-            name: '',
-        };
-    },
-
     methods: {
         signUp() {
-            this.$userStore.createUser(this.$api, this.email, this.password, this.name)
+            this.getUserStore.createUser(this.$api, this.email.value, this.password.value, this.name.value)
+        },
+    },
+    computed: {
+        getUserStore() {
+            return this.$userStore;
         }
     }
 }
@@ -27,6 +36,10 @@ export default {
 
 <template>
     <div class="landing-page">
+        <Loading :loading="getUserStore.loading" />
+        <Modal :message="$t('errorSignUp')" v-if="getUserStore.error" @close="getUserStore.clearError" error />
+        <Modal :message="$t('userSignUpSuccessful')" v-if="getUserStore.showSuccess"
+            @close="getUserStore.clearSuccess" />
         <div class="background">
             <div class="col col-8 content">
                 <h1 class="title">Util Routine</h1>
@@ -40,30 +53,25 @@ export default {
                     <h2 class="title">{{ $t("signUp") }}</h2>
                     <div class="form-group">
                         <label for="email">{{ $t("email") }}</label>
-                        <Field type="email" id="email" :name="$t('email')" v-model="email"
-                            :placeholder="$t('enterEmail')" rules="required|email" />
+                        <Field type="email" id="email" :name="$t('email')" ref="email" :placeholder="$t('enterEmail')"
+                            rules="required|email" />
                         <ErrorMessage :name="$t('email')" />
                     </div>
                     <div class="form-group">
                         <label for="password">{{ $t("password") }}</label>
-                        <Field type="password" id="password" :name="$t('password')" v-model="password"
+                        <Field type="password" id="password" :name="$t('password')" ref="password"
                             :placeholder="$t('enterPassword')" rules="required|min:6" />
                         <ErrorMessage :name="$t('password')" />
                     </div>
                     <div class="form-group">
                         <label for="name">{{ $t("name") }}</label>
-                        <Field type="text" id="name" :name="$t('name')" v-model="name" :placeholder="$t('enterName')"
+                        <Field type="text" id="name" :name="$t('name')" ref="name" :placeholder="$t('enterName')"
                             rules="required" />
                         <ErrorMessage :name="$t('name')" />
                     </div>
                     <button type="submit">{{ $t("signUp") }}</button>
                     <nuxt-link class="link" to="/">{{ $t("login") }}</nuxt-link>
                 </Form>
-                <div v-if="this.$userStore.loading" class="loading-overlay">
-                    <div class="spinner"></div>
-                </div>
-                <ErrorModal :errorMessage="this.$userStore.error" v-if="this.$userStore.error"
-                    @close="this.$userStore.clearError" />
             </div>
         </div>
         <Footer />

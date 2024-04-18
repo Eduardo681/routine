@@ -46,7 +46,7 @@ input {
 
 input + span {
   display: block;
-  color: red;
+  color: $error-color;
   font-size: 0.8rem;
   margin-top: 0.25rem;
   width: 100%;

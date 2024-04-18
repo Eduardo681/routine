@@ -25,5 +25,12 @@
   "dietPlanningText":"Acreditamos que uma alimentação saudável e a prática regular de exercícios são fundamentais para uma vida equilibrada e feliz. Com nossas ferramentas de planejamento de dieta e registro de ficha de treino, você pode acompanhar sua ingestão de macronutrientes, definir metas de condicionamento físico e registrar seu progresso de forma fácil e conveniente.",
   "financesPlanning": "Controle de Entradas/Saídas Financeiras",
   "financesPlanningText": "Entendemos a importância de manter suas finanças em ordem. Nossa plataforma oferece recursos robustos para acompanhar suas entradas e saídas financeiras, fazer orçamentos, categorizar despesas e manter-se informado sobre sua situação financeira atual. Tome o controle de suas finanças e trabalhe em direção a uma estabilidade financeira duradoura.",
-  "conclusionAbout": "Com uma variedade de recursos e funcionalidades, nossa plataforma é projetada para simplificar sua vida e ajudá-lo a alcançar seus objetivos de maneira eficaz e gratificante. Junte-se a nós hoje e comece sua jornada em direção a uma vida mais organizada, equilibrada e realizada!"
+  "conclusionAbout": "Com uma variedade de recursos e funcionalidades, nossa plataforma é projetada para simplificar sua vida e ajudá-lo a alcançar seus objetivos de maneira eficaz e gratificante. Junte-se a nós hoje e comece sua jornada em direção a uma vida mais organizada, equilibrada e realizada!",
+  "invalidCredentials": "Dados incorretos",
+  "error": "Erro",
+  "footerCopy": "2024. Todos os direitos reservados.",
+  "developed": "Desenvolvido por ",
+  "userSignUpSuccessful": "Usuário cadastrado com sucesso!",
+  "errorSignUp": "Erro ao criar usuário",
+  "success": "Sucesso!"
 }
