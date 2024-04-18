@@ -1,7 +1,7 @@
 <script lang="ts">
 import { ErrorMessage, Field, Form } from 'vee-validate';
-import Loading from '../components/Loading.vue';
-import Modal from '../components/modals/Modal.vue';
+import Loading from '~/components/Loading.vue';
+import Modal from '~/components/modals/Modal.vue';
 export default {
   setup() {
     let email = ref()

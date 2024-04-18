@@ -11,6 +11,7 @@
                 <li><nuxt-link to="/finances">{{ $t("finances") }}</nuxt-link></li>
                 <li><nuxt-link to="/diet">{{ $t("diet") }}</nuxt-link></li>
                 <li><nuxt-link to="/train">{{ $t("train") }}</nuxt-link></li>
+                <li><nuxt-link to="/profile">{{ $t("profile") }}</nuxt-link></li>
                 <li><a to="/logout">{{ $t("logout") }}</a></li>
             </ul>
         </nav>

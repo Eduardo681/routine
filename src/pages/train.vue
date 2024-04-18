@@ -17,7 +17,7 @@ export default {
         <div class="container">
             <div class="background">
                 <Header />
-                finances
+                train
             </div>
         </div>
         <Footer />

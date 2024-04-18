@@ -17,7 +17,7 @@ export default {
         <div class="container">
             <div class="background">
                 <Header />
-                diet
+                profile
             </div>
         </div>
         <Footer />
