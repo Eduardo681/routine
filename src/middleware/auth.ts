@@ -1,6 +1,7 @@
 import { useUserStore } from "~/store/userStore";
 
 export default defineNuxtRouteMiddleware((to) => {
+  if (process.server) return;
   const { logged } = storeToRefs(useUserStore());
   const token = useCookie("token");
 
