@@ -52,9 +52,9 @@ export default {
         <Form class="login-form" @submit="login">
           <h2 class="title">{{ $t("login") }}</h2>
           <div class="form-group">
-            <label for="username">{{ $t("email") }}</label>
-            <Field type="email" id="email" :name="$t('email')" ref="email" :placeholder="$t('enterEmail')"
-              rules="required|email" />
+            <label for="email">{{ $t("email") }}</label>
+            <Field type="email" id="email" autocomplete="true" :name="$t('email')" ref="email"
+              :placeholder="$t('enterEmail')" rules="required|email" />
             <ErrorMessage :name="$t('email')" />
           </div>
           <div class="form-group">
@@ -63,7 +63,7 @@ export default {
               :placeholder="$t('enterPassword')" rules="required|min:6" />
             <ErrorMessage :name="$t('password')" />
           </div>
-          <button type="submit">{{ $t("login") }}</button>
+          <button type="submit" class="btn-primary">{{ $t("login") }}</button>
           <p>{{ $t("noAccount") }} <nuxt-link to="/signup" class="link">{{ $t("signUp") }}</nuxt-link></p>
         </Form>
       </div>

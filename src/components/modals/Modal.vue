@@ -30,7 +30,7 @@ export default {
                 <p>{{ message }}</p>
             </div>
             <div class="modal-footer">
-                <button @click="closeModal">OK</button>
+                <button class="btn-primary" @click="closeModal">OK</button>
             </div>
         </div>
     </div>

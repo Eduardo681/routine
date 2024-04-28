@@ -69,7 +69,7 @@ export default {
                             rules="required" />
                         <ErrorMessage :name="$t('name')" />
                     </div>
-                    <button type="submit">{{ $t("signUp") }}</button>
+                    <button type="submit" class="btn-primary">{{ $t("signUp") }}</button>
                     <nuxt-link class="link" to="/">{{ $t("login") }}</nuxt-link>
                 </Form>
             </div>

@@ -1,70 +1,8 @@
 @import "_variables.scss";
 @import "_grid.scss";
-@import "base";
+@import "globals.scss";
+@import "unlogged.scss";
 @import "components/footer";
 @import "components/loading";
 @import "components/modal";
 @import "components/header";
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Mitr", sans-serif;
-}
-
-button,
-.btn-primary {
-  display: block;
-  text-align: center;
-  min-height: 45px;
-  padding: 10px 20px;
-  background: $primary-color;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-  width: 100%;
-  margin: 15px 0;
-  cursor: pointer;
-  text-decoration: none;
-
-  &:hover {
-    background-color: darken($primary-color, 10%);
-  }
-}
-
-.form-group {
-  margin: 10px 0;
-}
-
-input {
-  width: 100%;
-  padding: 10px;
-  border-radius: 4px;
-  border: 1px solid $secondary-color;
-}
-
-input + span {
-  display: block;
-  color: $error-color;
-  font-size: 0.8rem;
-  margin-top: 0.25rem;
-  width: 100%;
-  text-align: left;
-}
-
-input + span::first-letter {
-  text-transform: uppercase;
-}
-
-.link {
-  color: $primary-color;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  text-decoration: underline;
-
-  &:hover {
-    color: darken($primary-color, 10%);
-  }
-}

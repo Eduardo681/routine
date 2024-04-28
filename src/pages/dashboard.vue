@@ -5,11 +5,6 @@ export default {
     components: {
         Header
     },
-    setup: () => {
-        definePageMeta({
-            middleware: 'auth'
-        })
-    }
 }
 </script>
 <template>

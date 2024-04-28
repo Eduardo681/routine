@@ -1,19 +1,48 @@
+<script lang="ts">
+export default {
+    setup() {
+        let menuOpen = ref<boolean>(true);
+
+        const menuToggler = () => {
+            menuOpen.value = !menuOpen.value;
+        };
+
+        return {
+            menuOpen,
+            menuToggler
+        };
+    },
+    methods: {
+        logout() {
+            this.$userStore.logUserOut()
+        }
+    }
+}
+</script>
 <template>
-    <header class="header">
-        <div class="logo">
-            <img src="~/assets/images/logo.png" alt="Logo">
+    <div class="header">
+        <div class="header__content">
+            <div>
+                <img src="~assets/images/logo.png" alt="Logo" class="logo">
+            </div>
+            <div>
+                <nav class="nav" v-if="menuOpen">
+                    <RouterLink class="nav__item" to="/dashboard">Dashboard</RouterLink>
+                    <RouterLink class="nav__item" to="/tasks">{{ $t("tasks") }}</RouterLink>
+                    <RouterLink class="nav__item" to="/goals">{{ $t("goals") }}</RouterLink>
+                    <RouterLink class="nav__item" to="/finances">{{ $t("finances") }}</RouterLink>
+                    <RouterLink class="nav__item" to="/diet">{{ $t("diet") }}</RouterLink>
+                    <RouterLink class="nav__item" to="/train">{{ $t("train") }}</RouterLink>
+                    <RouterLink class="nav__item" to="/profile">{{ $t("profile") }}</RouterLink>
+                    <a @click="logout" class="nav__item">{{ $t("logout") }}</a>
+                </nav>
+            </div>
+            <div>
+                <button class="header__toggler" @click="menuToggler">
+                    <img class="icon" v-if="menuOpen" src="~assets/images/menu-open.svg" />
+                    <img class="icon" v-else="menuOpen" src="~assets/images/menu-close.svg" />
+                </button>
+            </div>
         </div>
-        <nav class="nav">
-            <ul>
-                <li><nuxt-link to="/dashboard">Dashboard</nuxt-link></li>
-                <li><nuxt-link to="/tasks">{{ $t("tasks") }}</nuxt-link></li>
-                <li><nuxt-link to="/goals">{{ $t("goals") }}</nuxt-link></li>
-                <li><nuxt-link to="/finances">{{ $t("finances") }}</nuxt-link></li>
-                <li><nuxt-link to="/diet">{{ $t("diet") }}</nuxt-link></li>
-                <li><nuxt-link to="/train">{{ $t("train") }}</nuxt-link></li>
-                <li><nuxt-link to="/profile">{{ $t("profile") }}</nuxt-link></li>
-                <li><a to="/logout">{{ $t("logout") }}</a></li>
-            </ul>
-        </nav>
-    </header>
+    </div>
 </template>

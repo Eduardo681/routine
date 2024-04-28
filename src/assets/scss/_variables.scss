@@ -1,3 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap");
+
 $primary-color: #2e8cad;
 $secondary-color: #d6dbdb;
 $error-color: #ff3333;
+$default-font: "Mitr", sans-serif;
+
+$bg-color: #fff;
+
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 32px;
+
+$header-height: 72px;
+
+$sm: 37.5em;
+$md: 48em;
+$lg: 64em;
+$xl: 75em;
+
+@mixin breakpoint($point) {
+  @if $point == lg {
+    @media (min-width: $lg) {
+      @content;
+    }
+  }
+}
