@@ -4,6 +4,14 @@ import Header from '../components/Header.vue';
 export default {
     components: {
         Header
+    },
+    computed: {
+        getTaskStore() {
+            return this.$taskStore;
+        }
+    },
+    mounted() {
+        this.getTaskStore.getTasks(this.$api, "2024-04-25");
     }
 }
 </script>

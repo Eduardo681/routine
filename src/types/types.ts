@@ -16,3 +16,12 @@ interface LoginResponse {
   };
   message: string | null;
 }
+
+interface TaskState {
+  tasks: Task[];
+  error: boolean;
+  loading: boolean;
+  showSuccess: boolean;
+}
+
+interface Task {}
