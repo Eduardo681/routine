@@ -1,10 +1,16 @@
 $grid-columns: 12;
 $grid-gutter-width: 20px;
+$lg: 768px; // Adicionei esta variável para o ponto de quebra do media query
 
 @mixin grid-span($columns) {
-  width: calc($columns / $grid-columns);
+  $half-gutter-width: $grid-gutter-width / 2;
+
+  width: calc(100% / $grid-columns * $columns - #{$grid-gutter-width});
   float: left;
-  margin-right: $grid-gutter-width;
+  margin-left: $half-gutter-width;
+  margin-right: $half-gutter-width;
+
+  box-sizing: border-box;
 }
 
 @mixin clearfix() {
@@ -15,33 +21,14 @@ $grid-gutter-width: 20px;
   }
 }
 
-.column {
-  @include clearfix();
-  box-sizing: border-box;
-}
-
 .col {
-  @include grid-span(1);
+  @include clearfix();
 }
 
-.col-2 {
-  @include grid-span(2);
-}
-
-.col-4 {
-  @include grid-span(4);
-}
-
-.col-6 {
-  @include grid-span(6);
-}
-
-.col-8 {
-  @include grid-span(8);
-}
-
-.col-8 {
-  @include grid-span(10);
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    @include grid-span($i);
+  }
 }
 
 @media screen and (max-width: $lg) {

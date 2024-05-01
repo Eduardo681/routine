@@ -27,11 +27,31 @@
   }
 }
 
+.btn-secondary {
+  display: block;
+  text-align: center;
+  min-height: 45px;
+  padding: 10px 20px;
+  background: none;
+  color: $primary-color;
+  border: 1px solid $primary-color;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin: 15px 0;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    background-color: rgba($primary-color, 0.1);
+  }
+}
+
 .form-group {
   margin: 10px 0;
 }
 
-input {
+input:not([type="checkbox"], [class="task-date"]) {
   width: 100%;
   padding: 10px;
   border-radius: 4px;
@@ -63,8 +83,9 @@ input + span::first-letter {
 }
 
 .icon {
-  width: 25px;
+  width: 15px;
   border: none;
+  background: none;
 }
 
 .router-link-active {
@@ -77,14 +98,14 @@ input + span::first-letter {
 
   .background {
     position: relative;
-    height: 90vh;
+    height: 95vh;
     background-image: url("~/assets/images/background_home.png");
     background-size: cover;
     background-position: initial;
     display: flex;
     overflow: auto;
 
-    padding-top: 10%;
+    padding-top: 80px;
 
     @media screen and (max-width: $lg) {
       display: flex;
@@ -94,5 +115,33 @@ input + span::first-letter {
       padding: 20px;
       overflow-x: hidden;
     }
+
+    .container-fluid {
+      padding: 0 50px;
+    }
   }
+}
+
+.floating-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 32px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  font-weight: 300;
+}
+
+.floating-button:hover {
+  background-color: #0056b3;
+}
+
+h2 {
+  text-align: center;
 }

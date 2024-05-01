@@ -28,7 +28,8 @@ export default {
             <div>
                 <nav class="nav" v-if="menuOpen">
                     <RouterLink class="nav__item" to="/dashboard">Dashboard</RouterLink>
-                    <RouterLink class="nav__item" to="/tasks">{{ $t("tasks") }}</RouterLink>
+                    <RouterLink class="nav__item" :class="{ 'router-link-active': $route.path.startsWith('/tasks/') }"
+                        to="/tasks">{{ $t("tasks") }}</RouterLink>
                     <RouterLink class="nav__item" to="/goals">{{ $t("goals") }}</RouterLink>
                     <RouterLink class="nav__item" to="/finances">{{ $t("finances") }}</RouterLink>
                     <RouterLink class="nav__item" to="/diet">{{ $t("diet") }}</RouterLink>

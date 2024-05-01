@@ -16,8 +16,7 @@ export const useTaskStore = defineStore("task", {
         const response: AxiosResponse = await api.get(
           `/tasks/week?currentDate=${dateInit}`
         );
-        this.tasks = response.data;
-        console.log(response.data);
+        this.tasks = response.data.data;
       } catch (error: any) {
         this.error = true;
       } finally {

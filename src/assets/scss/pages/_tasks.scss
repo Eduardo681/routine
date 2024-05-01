@@ -1,0 +1,112 @@
+.task-container {
+  width: 100%;
+  grid-template-columns: repeat(7, 1fr);
+  display: grid;
+}
+
+.task-page-container {
+  height: 100%;
+  width: 100%;
+}
+
+.task-date {
+  width: 200px;
+  float: right;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  border: 1px solid rgba($color: #000000, $alpha: 0.1);
+  border-radius: 4px;
+  padding: 5px;
+  text-align: center;
+}
+
+.time-container {
+  display: flex;
+  flex-direction: column;
+
+  .time {
+    font-size: 11px;
+  }
+}
+
+.task-card {
+  border: 1px solid rgba($color: #000000, $alpha: 0.1);
+  border-radius: 0.25rem;
+  padding-top: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  margin: 0 5px 5px 5px;
+
+  .date {
+    font-weight: 500;
+    font-size: 18px;
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+    height: 50px;
+  }
+
+  .task {
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    padding: 5px;
+
+    &.done {
+      background-color: #00000012;
+    }
+
+    input[type="checkbox"] {
+      width: 15px;
+      height: 15px;
+      accent-color: green;
+      appearance: none;
+      -webkit-appearance: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      padding: 0.1rem;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      position: relative;
+      border-radius: 100%;
+    }
+
+    input[type="checkbox"]::before {
+      content: "\2714";
+      font-size: 1rem;
+      color: transparent;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    input[type="checkbox"]:checked::before {
+      color: black;
+    }
+
+    input[type="checkbox"]:hover::before {
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    label {
+      flex: 1;
+    }
+  }
+}
+
+form {
+  width: 100%;
+
+  .task-form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+  }
+
+  input {
+    min-width: 300px;
+  }
+}

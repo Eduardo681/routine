@@ -1,6 +1,6 @@
 .footer {
   text-align: center;
-  height: 10vh;
+  height: 5vh;
   position: fixed;
   width: 100%;
   border-top: 1px solid $secondary-color;
@@ -9,11 +9,6 @@
   .container {
     max-width: 1200px;
     margin: 0 auto;
-  }
-
-  .copy,
-  .credit {
-    margin-bottom: 10px;
   }
 
   .developer {
