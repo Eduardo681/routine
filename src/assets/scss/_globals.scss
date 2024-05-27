@@ -51,14 +51,15 @@
   margin: 10px 0;
 }
 
-input:not([type="checkbox"], [class="task-date"]) {
+input:not([type="checkbox"], [class="task-date"]),
+select {
   width: 100%;
   padding: 10px;
   border-radius: 4px;
   border: 1px solid $secondary-color;
 }
 
-input + span {
+span[role="alert"] {
   display: block;
   color: $error-color;
   font-size: 0.8rem;
@@ -67,7 +68,7 @@ input + span {
   text-align: left;
 }
 
-input + span::first-letter {
+span[role="alert"]::first-letter {
   text-transform: uppercase;
 }
 
@@ -76,6 +77,8 @@ input + span::first-letter {
   text-decoration: none;
   transition: color 0.3s ease;
   text-decoration: underline;
+  border: none;
+  background: inherit;
 
   &:hover {
     color: darken($primary-color, 10%);

@@ -3,7 +3,7 @@ $grid-gutter-width: 20px;
 $lg: 768px; // Adicionei esta variável para o ponto de quebra do media query
 
 @mixin grid-span($columns) {
-  $half-gutter-width: $grid-gutter-width / 2;
+  $half-gutter-width: calc($grid-gutter-width / 2);
 
   width: calc(100% / $grid-columns * $columns - #{$grid-gutter-width});
   float: left;

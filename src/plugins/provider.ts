@@ -1,5 +1,6 @@
 import axios from "axios";
 import type { Pinia } from "pinia";
+import { useCategoryStore } from "~/store/category";
 import { useTaskStore } from "~/store/taskStore";
 import { useUserStore } from "~/store/userStore";
 interface RuntimeConfig {
@@ -23,6 +24,7 @@ export default defineNuxtPlugin((nuxtApp: any) => {
     provide: {
       userStore: useUserStore(nuxtApp.$pinia as Pinia),
       taskStore: useTaskStore(nuxtApp.$pinia as Pinia),
+      categoryStore: useCategoryStore(nuxtApp.$pinia as Pinia),
       api: api,
     },
   };

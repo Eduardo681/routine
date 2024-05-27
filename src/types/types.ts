@@ -25,3 +25,15 @@ interface TaskState {
 }
 
 interface Task {}
+
+interface CategoryState {
+  categories: Category[];
+  error: boolean;
+  loading: boolean;
+  showSuccess: boolean;
+}
+
+interface Category {
+  id: number;
+  title: string;
+}
